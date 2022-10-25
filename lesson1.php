@@ -39,3 +39,18 @@ echo $foo . ' ' . $bar;
 // -------------------------------------------//
 //  Lesson 1.4 - Data Types & Casting//
 // -------------------------------------------//
+
+# Scalar Types = bool , int, float, iterable
+
+# TIP: To return what the type the variable is, use the function gettype()
+
+# TIP: var_dump() function provides the variable type and the values it has
+
+//// STRICT TYPE AND TYPE CASTING ////
+
+# declare(strict_types=1);
+
+# Type Casting
+// change string 5 into interger 5
+$x = (int) '5';
+var_dump($x);
