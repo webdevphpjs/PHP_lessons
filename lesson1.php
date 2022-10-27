@@ -57,9 +57,9 @@ $x = (int) '5';
 var_dump($x);
 
 
-// ----------------------------------------------------------------//
+// ------------------------------------------------------------------//
 /// Array Data Type - Indexed, Associative & Multi-Dimensional Arrays
-// ----------------------------------------------------------------//
+// ------------------------------------------------------------------//
 
 
 $languages = ['PHP', 'Java', 'Python'];
@@ -80,3 +80,42 @@ array_push($languages, 'SQL', 'C#', 'GO'); // mutates array and add extra items
 echo '<pre>';
 print_r($languages);
 echo '<pre>';
+
+## Associative array with named key
+
+$phpFrameworks = [
+ 'Laravel' => '9.1',
+ 'Synphony' => '6.1.6',
+ 'Slim' => '4.10'
+
+];
+
+// add new element with key
+$newFramework = 'Yii';
+$phpFrameworks[$newFramework] = '2';
+
+echo '<pre>';
+print_r($phpFrameworks);
+echo '<pre>';
+
+
+## Loop through associative
+// for with count 
+
+$pets = ['Dog', 'Cat', 'Hamster', 'Rabbit', 'Fish'];
+$arraylength = count($pets);
+for ($x = 0; $x < $arraylength; $x++) {
+ echo $pets[$x];
+ echo "<br>";
+}
+
+// foreach no need for count 
+$pets = ['Dog' => '2', 'Cat' => '3', 'Hamster' => '4', 'Rabbit' => '5', 'Fish' => '9'];
+
+foreach ($pets as $x => $x_value) {
+ echo "Pet: " . $x . " = " . $x_value;
+ echo "<br>";
+}
+
+
+$pets = ['Dog', 'Cat', 'Hamster', 'Rabbit', 'Fish'];
