@@ -1,6 +1,6 @@
 <?php
 // -------------------------------------------//
-//  Lesson 1.3 - Constants & Variable Variables//
+//  Constants & Variable Variables//
 // -------------------------------------------//
 
 //// DEFINE CONSTANTS ////
@@ -23,6 +23,7 @@ echo '</br>';
 // Magic constants can change depending where they are used 
 
 echo __FILE__;
+echo "Line number is" . __FILE__;
 echo '</br>';
 
 
@@ -37,14 +38,14 @@ echo $foo . ' ' . $bar;
 
 
 // -------------------------------------------//
-//  Lesson 1.4 - Data Types & Casting//
+//  Data Types & Casting//
 // -------------------------------------------//
 
 # Scalar Types = bool , int, float, iterable
 
-# TIP: To return what the type the variable is, use the function gettype()
+# TIP >> To return what the type the variable is, use the function gettype()
 
-# TIP: var_dump() function provides the variable type and the values it has
+# TIP >> var_dump() function provides the variable type and the values it has
 
 //// STRICT TYPE AND TYPE CASTING ////
 
@@ -54,3 +55,28 @@ echo $foo . ' ' . $bar;
 // change string 5 into interger 5
 $x = (int) '5';
 var_dump($x);
+
+
+// ----------------------------------------------------------------//
+/// Array Data Type - Indexed, Associative & Multi-Dimensional Arrays
+// ----------------------------------------------------------------//
+
+
+$languages = ['PHP', 'Java', 'Python'];
+$languages[1] = 'C++'; // Update and index item with new value
+
+
+// TIP >> Using print are with html pre tags formats the result
+echo '<pre>';
+print_r($languages);
+echo '<pre>';
+
+echo "There are " . count($languages) . " items in the array "; // number of items in array
+
+$languages[] = 'Rust'; // push item to end of array array
+
+array_push($languages, 'SQL', 'C#', 'GO'); // mutates array and add extra items
+
+echo '<pre>';
+print_r($languages);
+echo '<pre>';
